@@ -1,13 +1,13 @@
-name: 冬瓜sign
+name: 京西sign
 #https://gitee.com/lxk0301/jd_scripts/raw/master/jd_bean_sign.js
 #https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-#测试冬瓜签到
+#测试京西签到
 on:
     # push:
     #     branches:
     #         - master
     schedule:
-        - cron: "0 16 * * *"
+        - cron: "5 0 * * *"
     workflow_dispatch:
 jobs:
     build:
@@ -22,12 +22,12 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【冬瓜sign】"
+            - name: "运行 【京西sign】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                  SYNCURL: https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+                  SYNCURL: https://raw.githubusercontent.com/21600429/xipian_123/main/HAOYANGMAO/The.Flash/The.Flash/jx_sign.js
                   SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
