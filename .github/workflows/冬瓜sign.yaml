@@ -7,7 +7,7 @@ on:
     #     branches:
     #         - master
     schedule:
-        - cron: "4 0 * * *"
+        - cron: "4 16 * * *"
     workflow_dispatch:
 jobs:
     build:
