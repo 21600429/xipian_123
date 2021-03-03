@@ -5,14 +5,14 @@
 #活动入口：京东APP我的-更多工具-宠汪汪
 
 
-name: 宠王王食喂
+name: 宠王王
 
 on:
     # push:
     #     branches:
     #         - main
     schedule:
-        - cron: "15 0-23/1 * * *"
+        - cron: "15 0-23/2 * * *"
     workflow_dispatch:
 jobs:
     build:
@@ -27,12 +27,12 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【宠王王食喂】"
+            - name: "运行 【宠王王】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                  SYNCURL: /The.Flash/The.Flash/jOd_jo0y_fee0dP0ets.js
+                  SYNCURL: https://raw.githubusercontent.com/21600429/xipian_123/main/HAOYANGMAO/The.Flash/The.Flash/jd_joy.js
                   JOY_FEED_COUNT: ${{ secrets.JOY_FEED_COUNT }}
                   SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
