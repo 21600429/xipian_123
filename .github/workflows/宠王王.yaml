@@ -33,7 +33,6 @@ jobs:
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
                   SYNCURL: https://raw.githubusercontent.com/21600429/xipian_123/main/HAOYANGMAO/The.Flash/The.Flash/jd_joy.js
-                  JOY_FEED_COUNT: ${{ secrets.JOY_FEED_COUNT }}
                   SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
