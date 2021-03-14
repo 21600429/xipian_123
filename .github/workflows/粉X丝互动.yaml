@@ -1,18 +1,23 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-#京东摇钱树 ：https://gitee.com/lxk0301/jd_scripts/raw/master/jd_moneyTree.js
-#更新时间：2020-11-16
-#活动入口：京东APP我的-更多工具-摇钱树
-#京东摇钱树支持京东双账号
-#注：如果使用Node.js, 需自行安装'crypto-js,got,http-server,tough-cookie'模块. 例: npm install crypto-js http-server tough-cookie got --save
-name: 摇钱树
+#粉丝互动
+#类似于京东抽奖机，各个店铺的粉丝互动活动。
+#有看到新活动可以私信我添加活动ID。 GitHub@i-chenzhe
+#新手写脚本，难免有bug，能用且用。
+#脚本内置了一个给作者任务助力的网络请求，默认开启，如介意请自行关闭。
+#助力活动链接： https://h5.m.jd.com/babelDiy/Zeus/4ZK4ZpvoSreRB92RRo8bpJAQNoTq/index.html
+#参数 helpAuthor = false
+#更新地址：https://raw.githubusercontent.com/i-chenzhe/qx/main/jd_fanslove.js
+
+
+name: 粉X丝互动
 
 on:
     # push:
     #     branches:
     #         - main
     schedule:
-        - cron: "10 0-23/2 * * *"
+        - cron: "3 2 * * *"
     workflow_dispatch:
 jobs:
     build:
@@ -27,17 +32,17 @@ jobs:
             - name: npm install
               run: |
                   npm install
-                  npm install crypto-js http-server tough-cookie got --save
-            - name: "运行 【摇钱树】"
+            - name: "运行 【粉X丝互动】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                  SYNCURL: https://raw.githubusercontent.com/21600429/xipian_123/main/HAOYANGMAO/The.Flash/The.Flash/j1d_mon0eyT0ree.js
+                  SYNCURL: https://raw.githubusercontent.com/21600429/xipian_123/main/HAOYANGMAO/The.Flash/The.Flash/jd_fanslove.js
+                  SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
                   TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
                   TG_USER_ID: ${{ secrets.TG_USER_ID }}
                   EFORK: ${{ secrets.EFORK }}
                   GITHUB: ${{ secrets.GITHUB }}
-                  HELPURL: ${{ secrets.HELPURL }}
+                  
