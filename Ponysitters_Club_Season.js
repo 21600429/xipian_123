@@ -2,6 +2,8 @@
 // create by ruicky
 // detail url: https://github.com/ruicky/jd_sign_bot
 /*
+2020.3.5增加内置互助码填写
+2020.3.7修复github 日志log显示不了多账号,增加惊喜农场不需要运行的账号跳过功能
 
 　BBC2历史电视电影系列《空王冠》（The Hollow Crown）4部经典莎士比亚作品的新演绎，分别是：《理查二世》（Richard II）、《亨利四世：第一部》（Henry IV, Part 1）、《亨利四世：第二部》（Henry IV, Part 2）和《亨利五 世》（Henry V）。在2012年伦敦奥运会期间，为了向全世界展现英国文化，这四部电视电影将作为伦敦文化奥运的重点推荐剧目向全世界推行，在2012年6月播出。　　《亨利四世》是该系列的第二部。夺取理查二世权势的亨利四世，将由奥斯卡影帝杰瑞米·艾恩斯 Jeremy Irons饰演，将由《丑闻纪事》的导演理查德·艾尔掌镜，在《复仇者联盟》中雷神弟弟“洛基”汤姆·希德勒斯顿 Tom Hiddleston将饰演Prince Hal，西蒙·拉塞尔·比尔 Simon Russell Beale饰演约翰·福斯塔夫爵士，艾伦·阿姆斯特朗 Alun Armstrong饰演诺森伯兰伯爵。　　《亨利四世》展现了英国中世纪时期迷人的历史，并将演绎出近年来最野心勃勃的一部莎士比亚改编作品。《亨利四世》是莎士比亚历史剧中最成功、最受欢迎的一部，被看成莎士比亚历史剧的代表作。这部作品的主要内容是反映亨利四世和他的王子们与反叛的诸侯贵族进行殊死斗争的过程。莎士比亚突破传统历史剧多条线索交织发展的网状结构，采用了两条线索平行发展的结构——以亨利四世为代表的宫廷生活线索和以福斯塔夫为代表的市井生活线索。
 
@@ -48,13 +50,46 @@ const JXNCTOKENS = process.env.JXNCTOKENS; //京戏农场种子
 
 
 
+let jxnc_nodo=[];//惊喜农场固定跳过号码,格式jxnc_nodo=[0,1],意思是跳过第1个,第2个号码不执行.
+
+
+let NCShareCodes=[""];//京东农厂
+let JCShareCodes=[""];//惊喜工厂
+let DCShareCodes=[""];//东东农场
+let MCShareCodes=[""];//萌宠
+let MHShareCodes=[""];//京东盲盒
+let ZDShareCodes=[""];//种豆
+let ASShareCodes=[""];//签到领现金
+
+DCShareCodes=["T0205KkcMVdsowKfWEOA8ahSCjVWnYaS5kRrbA","T022a3rml4aiLcpZ-IRlTV6YdQCjVWnYaS5kRrbA","T0205KkcNEBKggCmYE-X8aF4CjVWnYaS5kRrbA","T0205KkcOnh4piyfUli80KRuCjVWnYaS5kRrbA","T0205KkcOUd8nAuWama06693CjVWnYaS5kRrbA","T011_aUiHE9QqAUCjVWnYaS5kRrbA","T0074r1uQRwCjVWnYaS5kRrbA"];//京东工厂
+
+JCShareCodes=["Q0VdTSuur3SLeSSfOW2A2Q==","v6859vuzm0wJDBqu2J9Shg==","dr9FS50xxupUafarZE8eVw=='","03d2cc97d77b45d799877a747638c8b0"];//惊喜工厂
+
+NCShareCodes=["268e797816f340bc9ad3656fa249d1a6","ae6488dc5f0c4669bfa432b9bc884191","cd9c333af0bd4a118c606a251868d427","03d2cc97d77b45d799877a747638c8b0","4ccc103e768c4ee4ad3cc81f4c3e32d7","6b20f5a4b2d1433b98afee5a4bd3cd2d","632693a86dc246d0940d9f0014d4b18f","b6ec9f9d062247929de179bb6e541096","ce8bb91f9a284f83bb039c96a3afb5b2"];//东东农场
+
+
+MCShareCodes=["MTAxODExNDYxMTEwMDAwMDAwMzk4NzYxOTc=","MTAxODExNDYxMTEwMDAwMDAwNDA1NDQwNzE=","MTE1NDAxNzgwMDAwMDAwNDI3NDEyMDc=","","",""];//萌宠
+
+
+MHShareCodes=["T0205KkcG01tji2_VliVw6ZQCjVWmIaW5kRrbA","T0205KkcMVdsowKfWEOA8ahSCjVWmIaW5kRrbA","MT022a3rml4aiLcpZ-IRlTV6YdQCjVWmIaW5kRrbA","T0205KkcIV9wsAOsd0Gs9apiCjVWmIaW5kRrbA","T0205KkcNEBKggCmYE- X8aF4CjVWmIaW5kRrbA","T0205KkcOnh4piyfUli80KRuCjVWmIaW5kRrbA","T0205KkcOUd8nAuWama06693CjVWmIaW5kRrbA","T011_aUiHE9QqAUCjVWmIaW5kRrbA","T0074r1uQRwCjVWmIaW5kRrbA"];//京东盲盒
+
+
+ZDShareCodes= ["7oivz2mjbmnx4bddymkpj42u75jmba2c6ga6eba","2vgtxj43q3jqzr2i5ac4uj2h6wxl66n4i326u3i","","rtsljotwy2w35aybpd23k55gta2uz3tlbgt7osy","ebxm5lgxoknqdcur7hjdy67t5475pzsaprcp5my","eeexxudqtlamp7utxeywyr2gmhltygosadewozy","mnmamd3ukiwrkybejwn7w5 bx3dvy2y63rsmvwq","fs3yda53gkbythw4dkjxnuees4","bor4yd4m4rb6k7iy6esprgh7tq"];//种豆
+
+
+ASShareCodes=["ASeU9YHaXHMKpuiTehrixL", "AS9pyiu3QJvmKoKfBEEtqB1w","ASeU9YN7_GHYVOhyy0nCJJ"];//签到领现金
 
 
 
 
+
+//格式["AA","BB","CC"]
+
+//当前互助码活动(动态更新中):['NC@京东农场', 'AS@签到领现金', 'MC@萌宠', 'JC@惊喜工厂', 'DC@京东工厂', 'ZD@种豆', 'MH@盲盒']
 
 let CookieJDs = [];
 let shareCodes=[];
+
 async function downFile() {
    
     await download(SyncUrl, "./",{filename:'temp.js'});
@@ -77,7 +112,8 @@ async function changeFiele(content, cookie) {
       console.log(`木有互助码数据，请在secret中加入朱丽娜网址`);
       else
      newContent =newContent.replace(`https://raw.githubusercontent.com/jd1994527314/iosrule/cs/JD_TG`, `${HELPURL}` );
-    
+     
+     newContent=AddFirstCode(newContent);
      
       await fs.writeFileSync( './temp.js', newContent, 'utf8')
     
@@ -87,15 +123,26 @@ async function executeOneByOne() {
     const content = await fs.readFileSync("./temp.js", "utf8");
     for (var i = 0; i < CookieJDs.length; i++) {
         console.log(`正在执行第${i + 1}个任务`);
+  if (process.env.SYNCURL.indexOf('j0xn0c.js')>0)
+{
+  if (jxnc_nodo.indexOf(i)>=0)
+      {
+  console.log(`惊喜农场默认设置,跳过第${i + 1}个账号`);
+      continue;}
+      
+      
+ }      
+        
+        
         changeFiele(content, CookieJDs[i]);
         $.UserName = decodeURIComponent(CookieJDs[i].match(/pt_pin=(.+?);/) && CookieJDs[i].match(/pt_pin=(.+?);/)[1])
         $.index = i + 1;
         $.nickName = '';
         message = ''
        console.log(`\n******开始【冬瓜号${$.index}】${$.nickName.slice(-4) || $.UserName.slice(-4)}*********\n`);
-       await exec("node temp.js >> result.txt");
+       await exec("node temp.js >> result"+(i+1)+".txt");
      
-       const path = "./result.txt";
+       const path = "./result"+(i+1)+".txt";
        let rcontent = "";
        if (fs.existsSync(path)) {
           rcontent = fs.readFileSync(path, "utf8");
@@ -114,11 +161,18 @@ async function executeOneByOne() {
           console.log('发送结果完毕');
           
           
-  } else {
+  } else if (SyncUrl.indexOf('jd_get_share_code')>0) 
+  {
+     console.log(hideme(rcontent,0));
+       } 
+ else    
+
+  {
          
-       console.log(hideme(rcontent));
-//console.log(rcontent);
+       console.log(hideme(rcontent,1));
+
      }
+       
     }
 }
 
@@ -172,22 +226,24 @@ else
 start();
 
 
-function hideme(st)
+function hideme(st,FLAG)
 {let fn1=""
 var zg =  /^[0-9a-zA-Z]*$/;
 
 for(let i=0;i<st.length;i++)
 {
-  if (zg.test(st[i])&&zg.test(st[i+1])&&zg.test(st[i+2])&&zg.test(st[i+3]))
+  if (FLAG==1){
+   
+   if (zg.test(st[i])&&zg.test(st[i+1])&&zg.test(st[i+2])&&zg.test(st[i+3]))
   {
    fn1=st.substr(st.indexOf(st[i]+st[i+1]+st[i+2]+st[i+3]+st[i+4]),5);
 st=st.replace(fn1,"*****");
   }
-  
+  }
 
 if (st[i]==("账"))
-{fn1=st.substr(i+2,5);
-st=st.replace(fn1,"*****");}
+{fn1=st.substr(i+2,7);
+st=st.replace(fn1,"************");}
 
 if (st[i]==("京"))
 {fn1=st.substr(i,1);
@@ -202,7 +258,39 @@ return st
 
 }
 
+function AddFirstCode(newContent){
+let ShareCode=[]
+if (process.env.SYNCURL.indexOf('CASH.js')>=0)
+ShareCode=ASShareCodes;
 
+else if (process.env.SYNCURL.indexOf('DJDC.js')>=0)
+ShareCode=DCShareCodes;
+
+else if  (process.env.SYNCURL.indexOf('DJMC.js')>=0)
+ShareCode=MCShareCodes;
+
+else if  (process.env.SYNCURL.indexOf('DJMH.js')>=0)
+ShareCode=MHShareCodes;
+
+
+else if  (process.env.SYNCURL.indexOf('DJNC.js')>=0)
+ShareCode=NCShareCodes;
+
+else if  (process.env.SYNCURL.indexOf('DJZD.js')>=0)
+ShareCode=ZDShareCodes;
+
+else if  (process.env.SYNCURL.indexOf('XJJC.js')>=0)
+ShareCode=JCShareCodes;
+
+
+
+
+console.log("开始获取内置朱丽娜");
+console.log(ShareCode)
+newContent =newContent.replace(`$.newShareCodes = []`,`$.newShareCodes=`+JSON.stringify(ShareCode));
+
+return newContent
+}
 
 
 
