@@ -53,7 +53,7 @@ const JXNCTOKENS = process.env.JXNCTOKENS; //京戏农场种子
 let jxnc_nodo=[];//惊喜农场固定跳过号码,格式jxnc_nodo=[0,1],意思是跳过第1个,第2个号码不执行.
 
 
-let NCShareCodes=[""];//京东农厂
+let NCShareCodes=[""];//京东工厂
 let JCShareCodes=[""];//惊喜工厂
 let DCShareCodes=[""];//东东农场
 let MCShareCodes=[""];//萌宠
@@ -61,23 +61,23 @@ let MHShareCodes=[""];//京东盲盒
 let ZDShareCodes=[""];//种豆
 let ASShareCodes=[""];//签到领现金
 
-DCShareCodes=["fb5705c98a1c431a953ddb7bc6cba8e9","51e16b57bef7493f99b1b6847d0d47e9","105dbbdf37f441dab3460de39f21f56c","cb2785c18b6842b59cf218b04ffb556d","f686c8a1b4854befa9846a9509e2a567","",""];//京东工厂
+DCShareCodes=["T0169qQzGU9HmlXVI3WpCjVWnYaS5kRrbA","T0225KkcRBcaowXTchylnPANdQCjVWnYaS5kRrbA","T0225KkcRUwcoweFJBz9lvZfcwCjVWnYaS5kRrbA","T0127awqGl4b9VTeCjVWnYaS5kRrbA","T0225KkcR0gfoFHeJE-mnKYNJwCjVWnYaS5kRrbA","T0205KkcAnlPoCilW0mq0qtKCjVWnYaS5kRrbA"];//京东工厂
 
-JCShareCodes=["Q0VdTSuur3SLeSSfOW2A2Q==","v6859vuzm0wJDBqu2J9Shg==","dr9FS50xxupUafarZE8eVw=='","03d2cc97d77b45d799877a747638c8b0"];//惊喜工厂
+JCShareCodes=["JHeL_ye7y6RTj4MIkDQGkA==","MPfXy7dDFe6XedhL3iTxNQ==","ez6ARsiqnYcKbxmD5PMvKA==","eLCAVfneVaROE3iFec-XFg==","lHZW5TbzIbXu08_-I9eE9w==","CS8fn885_17QRyhGdr7BpQ=="];//惊喜工厂
 
 NCShareCodes=["fb5705c98a1c431a953ddb7bc6cba8e9","51e16b57bef7493f99b1b6847d0d47e9","105dbbdf37f441dab3460de39f21f56c","cb2785c18b6842b59cf218b04ffb556d","f686c8a1b4854befa9846a9509e2a567","",""];//东东农场
 
 
-MCShareCodes=["MTAxODExNDYxMTEwMDAwMDAwMzk4NzYxOTc=","MTAxODExNDYxMTEwMDAwMDAwNDA1NDQwNzE=","MTE1NDAxNzgwMDAwMDAwNDI3NDEyMDc=","","",""];//萌宠
+MCShareCodes=["MTAxODc2NTEzNTAwMDAwMDAyNjQ2NTMzMQ==","MTAxODc2NTEzNTAwMDAwMDAzMTUzMDIwMQ==","MTAxODc2NTEzOTAwMDAwMDAyOTUzMDkxNQ==","MTE1NDQ5OTUwMDAwMDAwMzU3NjAwNTM=","MTE1NDQ5OTIwMDAwMDAwMzkxMjQxNDM=","MTE1NDAxNzYwMDAwMDAwNDA5ODg4OTE="];//萌宠
 
 
-MHShareCodes=["T0205KkcG01tji2_VliVw6ZQCjVWmIaW5kRrbA","T0205KkcMVdsowKfWEOA8ahSCjVWmIaW5kRrbA","MT022a3rml4aiLcpZ-IRlTV6YdQCjVWmIaW5kRrbA","T0205KkcIV9wsAOsd0Gs9apiCjVWmIaW5kRrbA","T0205KkcNEBKggCmYE- X8aF4CjVWmIaW5kRrbA","T0205KkcOnh4piyfUli80KRuCjVWmIaW5kRrbA","T0205KkcOUd8nAuWama06693CjVWmIaW5kRrbA","T011_aUiHE9QqAUCjVWmIaW5kRrbA","T0074r1uQRwCjVWmIaW5kRrbA"];//京东盲盒
+MHShareCodes=["T0169qQzGU9HmlXVI3WpCjVQmoaT5kRrbA","T0225KkcRBcaowXTchylnPANdQCjVQmoaT5kRrbA","T0225KkcRUwcoweFJBz9lvZfcwCjVQmoaT5kRrbA","T0127awqGl4b9VTeCjVQmoaT5kRrbA","T0225KkcR0gfoFHeJE-mnKYNJwCjVQmoaT5kRrbA","T0205KkcAnlPoCilW0mq0qtKCjVQmoaT5kRrbA"];//京东盲盒
 
 
-ZDShareCodes= ["7oivz2mjbmnx4bddymkpj42u75jmba2c6ga6eba","2vgtxj43q3jqzr2i5ac4uj2h6wxl66n4i326u3i","","rtsljotwy2w35aybpd23k55gta2uz3tlbgt7osy","ebxm5lgxoknqdcur7hjdy67t5475pzsaprcp5my","eeexxudqtlamp7utxeywyr2gmhltygosadewozy","mnmamd3ukiwrkybejwn7w5 bx3dvy2y63rsmvwq","fs3yda53gkbythw4dkjxnuees4","bor4yd4m4rb6k7iy6esprgh7tq"];//种豆
+ZDShareCodes= ["tqu75p2tueajkz7zccdjbu43fm5ac3f4ijdgqji","e7lhibzb3zek2hxt76ztps5xvmiwp3d36hoez6a","mlrdw3aw26j3xp5c2m4t3kt2g6oyc7ejlzlotzi","dmcbjqu4zowrc74ydnh7uh4bgm","4npkonnsy7xi3pna7vsu7fmi7oy75yq4pjn4nqa","4vvbjlml6tdfcro5wve4spi4muiilo4dhgbsbii"];//种豆
 
 
-ASShareCodes=["ASeU9YHaXHMKpuiTehrixL", "AS9pyiu3QJvmKoKfBEEtqB1w","ASeU9YN7_GHYVOhyy0nCJJ"];//签到领现金
+ASShareCodes=["a0J3Nb3sCf0k8gGI","eU9YaOWxMK0io2iEw3QU1w","eU9Yab63MK909WjcyXJG0Q","cEpuNqywZvwv","eU9Ya7q0M_kv9TuHwyIUhQ","eU9YLovkM4BUij2LjS9T"];//签到领现金
 
 
 
