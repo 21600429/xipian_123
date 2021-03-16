@@ -29,7 +29,6 @@ jobs:
               env:
                   RLURL: ${{ secrets.XLURL }}
                   RLHEADER: ${{ secrets.XLHEADER }}
-                  RLBODY: ${{ secrets.RLBODY }}
                   SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
