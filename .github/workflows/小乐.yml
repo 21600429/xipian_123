@@ -15,8 +15,6 @@ jobs:
         XL_HEADER: ${{ secrets.XL_HEADER }}  
         
     steps:
-      - name: Checkout
-        run: |
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
