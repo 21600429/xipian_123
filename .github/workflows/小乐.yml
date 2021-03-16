@@ -25,7 +25,7 @@ jobs:
       - name: '运行 【小乐】'
         if: env.XL_URL
         run: |
-          node other/xiaole.js
+          node xiaole.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
