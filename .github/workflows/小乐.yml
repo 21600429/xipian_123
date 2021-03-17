@@ -25,7 +25,7 @@ jobs:
       - name: '运行 【小乐】'
         if: env.XL_URL
         run: |
-          node xiaole.js
+          node https://qxzy.top/rules/QuantumultX/js/ZIYE/Task/xiaole.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
