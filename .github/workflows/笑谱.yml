@@ -19,9 +19,6 @@ jobs:
         XP_CASH: ${{ secrets.XP_CASH }}
         XP_live: ${{ secrets.XP_live }}
     steps:
-      - name: Checkout
-        run: |
-          git clone https://github.com/66903202/ziye.git ~/ziye
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
