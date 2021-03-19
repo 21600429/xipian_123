@@ -28,7 +28,7 @@ jobs:
                   node j0xn0c.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                  SYNCURL: HAOYANGMAO/The.Flash/The.Flash/j0xn0c.js
+                  #SYNCURL: https://raw.githubusercontent.com/21600429/xipian_123/main/HAOYANGMAO/The.Flash/The.Flash/j0xn0c.js
                   SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
