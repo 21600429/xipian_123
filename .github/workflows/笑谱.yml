@@ -28,7 +28,7 @@ jobs:
           npm install
       - name: '运行 【笑谱】'
         run: |
-          node iboxpay.js
+          node  iboxpay.js
         env:
           XP_refreshTOKEN: ${{ secrets.XP_refreshTOKEN }}
           XP_iboxpayvideoHEADER: ${{ secrets.XP_iboxpayvideoHEADER }}
