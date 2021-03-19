@@ -34,7 +34,7 @@ jobs:
         if: env.XL_URL
         run: |
           cd ~/JavaScript
-          node Task/xiaole.js
+          node other/xiaole.js
         env:
           
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
