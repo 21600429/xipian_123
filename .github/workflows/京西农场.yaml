@@ -23,13 +23,12 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【京西农场】"
+            - name: "运行 【冬瓜sign】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
                   SYNCURL: https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jxnc.js
-                  JXNCTOKENS: ${{ secrets.JXNCTOKENS }}
                   SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
