@@ -37,7 +37,9 @@ jobs:
           cd ~/ziye
           node iboxpay.js
         env:
-          
+          refreshtokenVal: ${{ secrets.XP_refreshTOKEN }}
+          iboxpayvideoheaderVal: ${{ secrets.XP_iboxpayvideoHEADER }}
+          iboxpayvideobodyVal: ${{ secrets.XP_iboxpayvideoBODY }}
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
