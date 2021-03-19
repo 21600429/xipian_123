@@ -28,7 +28,7 @@ jobs:
           npm install
       - name: '运行 【小乐】'
         run: |
-          node https://raw.githubusercontent.com/21600429/xipian_123/main/other/xiaole.js
+          node other/xiaole.js
         env:
           XL_URL: ${{ secrets.XL_URL }}
           XL_HEADER: ${{ secrets.XL_HEADER }}
