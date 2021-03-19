@@ -23,7 +23,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【冬瓜sign】"
+            - name: "运行 【京西农场】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
