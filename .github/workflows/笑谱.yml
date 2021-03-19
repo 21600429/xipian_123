@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/21600429/xipian_123.git ~/xipian_123
+          git clone https://github.com/66903202/ziye.git ~/ziye
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -29,12 +29,12 @@ jobs:
       - name: npm install
         if: env.XP_refreshTOKEN
         run: |
+          cd ~/ziye
           npm install
       - name: '运行 【笑谱】'
         if: env.XP_refreshTOKEN
-                XP_iboxpayvideoHEADER
-                XP_iboxpayvideoBODY
         run: |
+          cd ~/ziye
           node iboxpay.js
         env:
           
