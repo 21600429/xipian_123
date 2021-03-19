@@ -25,7 +25,7 @@ jobs:
                   npm install
             - name: "运行 【京西农场】"
               run: |
-                  node other/j0xn0c.js
+                  node j0xn0c.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
                   SYNCURL: https://jdsharedresourcescdn.azureedge.net/jdresource/jd_jxnc.js
