@@ -29,12 +29,12 @@ jobs:
       - name: npm install
         if: env.XP_refreshTOKEN
         run: |
-          cd ~/ziye
+          cd ~/xipian_123
           npm install
       - name: '运行 【笑谱】'
         if: env.XP_refreshTOKEN
         run: |
-          cd ~/ziye
+          cd ~/xipian_123
           node iboxpay.js
         env:
           
