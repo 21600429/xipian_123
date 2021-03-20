@@ -1,16 +1,16 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 火山小视频极速版
+name: 抖音火山版
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/20 22-15 * * *'
   watch:
     types: started
   repository_dispatch:
-    types: hotsoon
+    types: huoshan
 jobs:
   build:
     runs-on: ubuntu-latest
