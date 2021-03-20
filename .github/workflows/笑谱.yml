@@ -37,6 +37,7 @@ jobs:
           XP_iboxpayvideoBODY: ${{ secrets.XP_iboxpayvideoBODY }}
           XP_live: ${{ secrets.XP_live }}
           XP_CASH: ${{ secrets.XP_CASH }}
+          SYNCURL: iboxpay.js
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TXNEWS_NOTIFY_CONTROL: ${{ secrets.TXNEWS_NOTIFY_CONTROL }}
