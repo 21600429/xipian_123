@@ -6,7 +6,7 @@ name: 抖音火山版
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/20 22-15 * * *'
+    - cron: ' */20 * * *'
   watch:
     types: started
   repository_dispatch:
@@ -26,7 +26,7 @@ jobs:
           npm install
       - name: '运行 【火山小视频极速版】'
         run: |
-          node Task/hotsoon.js
+          node hotsoon.js
         env:
           HOTSOONSIGNHEADER: ${{ secrets. HOTSOONSIGNHEADER }}
           HOTSOONSIGNKEY: ${{ secrets. HOTSOONSIGNKEY }}
