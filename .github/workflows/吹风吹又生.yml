@@ -1,4 +1,4 @@
-name: 吹风吹又生
+name: 春风吹又生
 
 on:
   workflow_dispatch:
@@ -31,7 +31,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【吹风吹又生】'
+      - name: '运行 【春风吹又生】'
         run: |
           node Spring_turn.js
         env:
