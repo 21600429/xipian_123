@@ -25,10 +25,10 @@ jobs:
                   npm install
             - name: "运行 【京东极速版红包】"
               run: |
-                  node Ponysitters_Club_Season.js
+                  node jd_speed_redpocke.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                  SYNCURL: /The.Flash/The.Flash/jd_speed_redpocke.js
+                  SYNCURL: https://raw.githubusercontent.com/21600429/xipian_123/main/HAOYANGMAO/The.Flash/The.Flash/jd_speed_redpocke.js
                   JXNCTOKENS: ${{ secrets.JXNCTOKENS }}
                   SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
