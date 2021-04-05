@@ -25,7 +25,7 @@ jobs:
                   npm install
             - name: "运行 【喜京工厂】"
               run: |
-                  node Ponysitters_Club_Season.js
+                  node jd_dreamFactory.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
                   SYNCURL: https://raw.githubusercontent.com/21600429/xipian_123/main/HAOYANGMAO/jd_dreamFactory.js
