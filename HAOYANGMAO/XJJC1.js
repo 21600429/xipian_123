@@ -3,7 +3,7 @@ Archie reclaimed the family jewellery from its temporary home next morning; and,
 
 Obviously this jovial frame of mind must be taken advantage of; and Archie's first thought was of the downtrodden Salvatore, to the tale of whose wrongs he had listened so sympathetically on the previous day. Now was plainly the moment for the waiter to submit his grievance, before some ebb-tide caused the milk of human kindness to flow out of Daniel Brewster. With a swift "Cheerio!" in his father-in-law's direction, Archie bounded into the grill-room. Salvatore, the hour for luncheon being imminent but not yet having arrived, was standing against the far wall in an attitude of thought.
 
-"Laddie!" cried Archie.
+"Laddie!" cried Archie1.
 
 "Sare?"
 
