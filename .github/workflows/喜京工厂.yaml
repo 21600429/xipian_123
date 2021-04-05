@@ -1,14 +1,14 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 喜京工厂
+name: 冬瓜工厂
 
 on:
     # push:
     #     branches:
     #         - main
     schedule:
-        - cron: "13 * * * *"
+        - cron: "15 * * * *"
     workflow_dispatch:
 jobs:
     build:
@@ -23,12 +23,12 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【喜京工厂】"
+            - name: "运行 【惊喜工厂】"
               run: |
-                  node jd_dreamFactory.js
+                  node Ponysitters_Club_Season.js
               env:
                   JD_COOKIE: ${{ secrets.JD_COOKIE }}
-                  SYNCURL: https://raw.githubusercontent.com/21600429/xipian_123/main/HAOYANGMAO/jd_dreamFactory.js
+                  SYNCURL: /jd_dreamFactory.js
                   SCKEY: ${{ secrets.SCKEY }}
                   BARK_PUSH: ${{ secrets.BARK_PUSH }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY }}
