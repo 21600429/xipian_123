@@ -1,8 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: jd_cfd.js
-
+name: jd_cfd
 on:
     # push:
     #     branches:
@@ -23,7 +22,7 @@ jobs:
             - name: npm install
               run: |
                   npm install
-            - name: "运行 【jd_cfd.js】"
+            - name: "运行 【jd_cfd】"
               run: |
                   node Ponysitters_Club_Season.js
               env:
