@@ -34,7 +34,7 @@ jobs:
       - name: npm install
         run: |
           cd ~/Low_key
-          npm jd_carnivalcity
+          npm install
       - name: '运行 【jd_carnivalcity】'
         run: |
           cd ~/Low_key
