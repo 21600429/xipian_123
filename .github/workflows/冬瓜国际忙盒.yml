@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name:  冬瓜国际忙盒
+name:  j0d_g0lobal_mh
 
 on:
   workflow_dispatch:
@@ -35,7 +35,7 @@ jobs:
         run: |
           cd ~/Low_key
           npm install
-      - name: '运行 【冬瓜国际忙盒】'
+      - name: '运行 【j0d_g0lobal_mh】'
         run: |
           cd ~/Low_key
           node j0d_g0lobal_mh.js
