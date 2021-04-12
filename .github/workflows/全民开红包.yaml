@@ -9,7 +9,7 @@
 # 未实现功能：
 # 领3张券功能,邀请好友未实现
 
-name: jd_redPacket
+name: 全民开红包
 
 on:
   workflow_dispatch:
