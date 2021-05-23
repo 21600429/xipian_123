@@ -10,7 +10,7 @@ on:
   watch:
     types: [started]
   repository_dispatch:
-    types: jd_dreamFactory
+    types: jd_dreamFactory1
 jobs:
   build:
 
@@ -35,10 +35,10 @@ jobs:
         run: |
           cd ~/Low_key
           npm install
-      - name: '运行 【jd_dreamFactory】'
+      - name: '运行 【jd_dreamFactory1】'
         run: |
           cd ~/Low_key
-          node jd_dreamFactory.js
+          node jd_dreamFactory1.js
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
