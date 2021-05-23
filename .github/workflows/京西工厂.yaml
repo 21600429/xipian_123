@@ -42,7 +42,7 @@ jobs:
         env:
           JD_COOKIE: ${{ secrets.JD_COOKIE }}
           JD_DEBUG: ${{ secrets.JD_DEBUG }}
-          SYNCURL: /jd_dreamFactory.js
+          SYNCURL: /jd_dreamFactory1.js
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           QYWX_AM: ${{ secrets.QYWX_AM }}
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
